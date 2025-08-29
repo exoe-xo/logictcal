@@ -607,7 +607,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 // 🗂️ إعداد مجلد التخزين للصور
 const uploadDir = path.join(__dirname, '..', 'uploads');
@@ -829,3 +829,4 @@ router.put('/:id', async (req, res) => {
 
 // 📦 تصدير الراوتر
 module.exports = router;
+
