@@ -2,7 +2,7 @@
   "name": "logistical",
   "version": "1.0.0",
   "main": "index.js",
-  "proxy": "http://localhost:5000",
+  "proxy": " https://github.com/exoe-xo/logictcal.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run server\" \"npm run client\"",
