@@ -1,3 +1,4 @@
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://github.com/exoe-xo/logictcal.git' ;
 
 export default BASE_URL;
+
