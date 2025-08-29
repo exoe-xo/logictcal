@@ -1,0 +1,117 @@
+
+/* ✅ تصميم صفحة إضافة منتج جديد */
+/* 📁 client/src/pages/AddProduct.css */
+
+.add-product-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🧾 عنوان الصفحة */
+.add-product-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* 🧩 النموذج */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* 🏷️ تسميات الحقول */
+label {
+  font-weight: 600;
+  color: #444;
+}
+
+/* ✏️ الحقول النصية والرقمية */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #0078d4;
+  outline: none;
+}
+
+/* 🖼️ معاينة الصورة */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 📊 عرض هامش الربح */
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #007a00;
+}
+
+/* 🟢 زر التأكيد */
+button[type="button"] {
+  background-color: #ffc107;
+  color: #222;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #e0a800;
+}
+
+/* 🚀 زر الإرسال */
+button[type="submit"] {
+  background-color: #0078d4;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* 📱 استجابة لجميع الشاشات */
+@media (max-width: 600px) {
+  .add-product-container {
+    padding: 1rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
