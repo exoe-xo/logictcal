@@ -147,13 +147,23 @@ mongoose.connect(MONGO_URI);
 // });
 
 
-try {
-  await mongoose.connect(DB_URI, options);
-  console.log('✅ تم الاتصال بقاعدة البيانات');
-} catch (err) {
-  console.error('❌ فشل الاتصال بقاعدة البيانات:', err.message);
-  process.exit(1);
-}
+// try {
+//   await mongoose.connect(DB_URI, options);
+//   console.log('✅ تم الاتصال بقاعدة البيانات');
+// } catch (err) {
+//   console.error('❌ فشل الاتصال بقاعدة البيانات:', err.message);
+//   process.exit(1);
+// }
+
+mongoose.connect(DB_URI, options)
+  .then(() => {
+    console.log('✅ تم الاتصال بقاعدة البيانات');
+  })
+  .catch((err) => {
+    console.error('❌ فشل الاتصال بقاعدة البيانات:', err.message);
+    process.exit(1);
+  });
+
 
 
 // 🕒 طباعة وقت التشغيل الحالي حسب توقيت الجزائر
@@ -166,5 +176,6 @@ app.listen(PORT, () => {
   console.log(`\n🚀 Logistical server يعمل على: http://localhost:${PORT}`);
   console.log('📡 جاهز لاستقبال الطلبات من الواجهة الأمامية');
 });
+
 
 
