@@ -837,7 +837,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 /* ---------------------------------- المسارات ---------------------------------- */
 
@@ -1007,4 +1007,5 @@ router.put('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
 
