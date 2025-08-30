@@ -264,6 +264,7 @@ const OrdersList = () => {
   <div className="summary-item"><strong>الخصومات</strong> {totalDiscount.toFixed(2)} دج</div>
   <div className="summary-item"><strong>الربح بعد الخصم</strong> {finalProfit.toFixed(2)} دج</div>
   <div className="summary-item"><strong>هامش الربح</strong> {profitMargin}%</div>
+  <div className="summary-item"><strong>هامش الربح</strong> {finalProfit.toFixed(2)} دج</div>
   <div className="summary-item"><strong>نسبة الربح الصافي من رأس المال</strong> {netProfitPercent}%</div>
   <div className="summary-item"><strong>نسبة الخصم من الربح الصافي</strong> {discountPercentOfProfit}%</div>
 </div>
@@ -557,3 +558,4 @@ const OrdersList = () => {
 };
 
 export default OrdersList;
+
