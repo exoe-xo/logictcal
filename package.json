@@ -4,7 +4,6 @@
   "main": "server.js",
   "proxy": "https://logictcal.onrender.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/server.js",
     "client": "npm start --prefix client"
