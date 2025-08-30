@@ -657,7 +657,7 @@
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/Order');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 /* ---------------------------------- المسارات ---------------------------------- */
 
@@ -802,6 +802,7 @@ router.delete('/:id', async (req, res) => {
 
 // 📦 تصدير الراوتر
 module.exports = router;
+
 
 
 
