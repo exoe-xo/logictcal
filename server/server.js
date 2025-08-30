@@ -107,6 +107,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
 const app = require('./app'); // 🧠 استيراد التطبيق الرئيسي الذي يحتوي على المسارات
+const MONGO_URI = process.env.MONGO_URI;
+
 
 // 🧪 تحديد مسار ملف البيئة .env وتحميله
 const envPath = path.resolve(__dirname, './.env');
@@ -176,6 +178,7 @@ app.listen(PORT, () => {
   console.log(`\n🚀 Logistical server يعمل على: http://localhost:${PORT}`);
   console.log('📡 جاهز لاستقبال الطلبات من الواجهة الأمامية');
 });
+
 
 
 
