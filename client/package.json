@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://logictcal.onrender.com",
   "dependencies": {
     "@remix-run/router": "^1.23.0",
     "@testing-library/dom": "^10.4.1",
