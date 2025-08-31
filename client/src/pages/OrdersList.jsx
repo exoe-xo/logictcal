@@ -437,7 +437,8 @@ const profitMarginFromOrders = totalCostFromOrders > 0
         <tbody>
           {lowStockProducts.map(p => {
             // const imageUrl = `${BASE_URL}${p.imagePath}`;
-            const imageUrl = `${BASE_URL}/uploads/${prod.imagePath || prod.image}`;
+           const imageUrl = `${BASE_URL}/uploads/${p.imagePath || p.image}`;
+
 
             const marginValue = p.salePrice - p.costPrice;
             const marginPercent = p.costPrice > 0
@@ -591,6 +592,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
 };
 
 export default OrdersList;
+
 
 
 
