@@ -107,6 +107,35 @@ const OrdersList = () => {
 
   const discountPercentOfProfit = netProfit > 0 ? ((totalDiscount / netProfit) * 100).toFixed(2) : '0.00';
 
+
+   //🧮 الكود المناسب لحساب هامش الربح من الطلبات
+   // حسابات مجمعة من الطلبات المعروضة
+let totalCostFromOrders = 0;
+let totalSaleFromOrders = 0;
+let totalDiscountFromOrders = 0;
+
+orders.forEach(order => {
+  order.products.forEach(prod => {
+    totalCostFromOrders += (prod.costPrice || 0) * (prod.quantity || 0);
+    totalSaleFromOrders += (prod.salePrice || 0) * (prod.quantity || 0);
+  });
+
+  totalDiscountFromOrders += order.discountAmount || 0;
+});
+
+
+const netProfitFromOrders = totalSaleFromOrders - totalCostFromOrders;
+const finalProfitFromOrders = netProfitFromOrders - totalDiscountFromOrders;
+
+const profitMarginFromOrders = totalCostFromOrders > 0
+  ? ((finalProfitFromOrders / totalCostFromOrders) * 100).toFixed(2)
+  : '0.00';
+
+
+
+
+
+  
   // 🔍 فلترة المنتجات والطلبات
   const filteredProducts = products.filter(prod =>
     prod.productName?.toLowerCase().includes(productSearchTerm.toLowerCase())
@@ -263,8 +292,8 @@ const OrdersList = () => {
   <div className="summary-item"><strong>الربح الصافي</strong> {netProfit.toFixed(2)} دج</div>
   <div className="summary-item"><strong>الخصومات</strong> {totalDiscount.toFixed(2)} دج</div>
   <div className="summary-item"><strong>الربح بعد الخصم</strong> {finalProfit.toFixed(2)} دج</div>
-  <div className="summary-item"><strong>هامش الربح</strong> {profitMargin}%</div>
-  <div className="summary-item"><strong>هامش الربح</strong> {finalProfit.toFixed(2)} دج</div>
+  <div className="summary-item"> <strong>هامش الربح</strong> {profitMarginFromOrders}% </div>
+  <div className="summary-item"><strong>هامش الربح</strong> {finalProfitFromOrders.toFixed(2)} دج</div>
   <div className="summary-item"><strong>نسبة الربح الصافي من رأس المال</strong> {netProfitPercent}%</div>
   <div className="summary-item"><strong>نسبة الخصم من الربح الصافي</strong> {discountPercentOfProfit}%</div>
 </div>
@@ -558,4 +587,5 @@ const OrdersList = () => {
 };
 
 export default OrdersList;
+
 
