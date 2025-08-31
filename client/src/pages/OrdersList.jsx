@@ -436,7 +436,9 @@ const profitMarginFromOrders = totalCostFromOrders > 0
         </thead>
         <tbody>
           {lowStockProducts.map(p => {
-            const imageUrl = `${BASE_URL}${p.imagePath}`;
+            // const imageUrl = `${BASE_URL}${p.imagePath}`;
+            const imageUrl = `${BASE_URL}/uploads/${prod.imagePath || prod.image}`;
+
             const marginValue = p.salePrice - p.costPrice;
             const marginPercent = p.costPrice > 0
               ? ((marginValue / p.costPrice) * 100).toFixed(2)
@@ -589,6 +591,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
 };
 
 export default OrdersList;
+
 
 
 
