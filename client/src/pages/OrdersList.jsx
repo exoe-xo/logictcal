@@ -292,6 +292,8 @@ const profitMarginFromOrders = totalCostFromOrders > 0
   <div className="summary-item"><strong>الربح الصافي</strong> {netProfit.toFixed(2)} دج</div>
   <div className="summary-item"><strong>الخصومات</strong> {totalDiscount.toFixed(2)} دج</div>
   <div className="summary-item"><strong>الربح بعد الخصم</strong> {finalProfit.toFixed(2)} دج</div>
+    <div className="summary-item"><strong>هامش الربحالاجمالي</strong> {profitMargin}%</div>
+  <div className="summary-item"><strong>هامش الربح الاجمالي</strong> {finalProfit.toFixed(2)} دج</div>
   <div className="summary-item"> <strong>هامش الربح</strong> {profitMarginFromOrders}% </div>
   <div className="summary-item"><strong>هامش الربح</strong> {finalProfitFromOrders.toFixed(2)} دج</div>
   <div className="summary-item"><strong>نسبة الربح الصافي من رأس المال</strong> {netProfitPercent}%</div>
@@ -587,5 +589,6 @@ const profitMarginFromOrders = totalCostFromOrders > 0
 };
 
 export default OrdersList;
+
 
 
