@@ -394,6 +394,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
         const totalProdPrice = prod.salePrice * prod.quantity;
         // const imageUrl = `${BASE_URL}${prod.imagePath || prod.image}`;
          const imageUrl = `${BASE_URL}/uploads/${prod.imagePath || prod.image}`;
+
          
  
 
@@ -595,6 +596,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
 };
 
 export default OrdersList;
+
 
 
 
