@@ -556,7 +556,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
                   ? ((margin / prod.costPrice) * 100).toFixed(2)
                   : '0.00';
                 const totalProdPrice = prod.salePrice * prod.quantity;
-                const imageUrl = `${BASE_URL}${prod.imagePath || prod.image}`;
+                const imageUrl = `${BASE_URL}/uploads/${prod.imagePath || prod.image}`;
 
                 return (
                   <tr key={index}>
@@ -596,6 +596,7 @@ const profitMarginFromOrders = totalCostFromOrders > 0
 };
 
 export default OrdersList;
+
 
 
 
