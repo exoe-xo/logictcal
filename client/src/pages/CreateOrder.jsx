@@ -1129,7 +1129,7 @@ const CreateOrder = () => {
     console.log('🚀 إرسال الطلب:', payload);
 
     try {
-      await fetch(`${BASE_URL}/api/order`, {
+      await fetch(`${BASE_URL}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -1331,4 +1331,5 @@ const CreateOrder = () => {
 };
 
 export default CreateOrder;
+
 
